@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Projects (DarkCoder)
+{%endblock%}
+
+{% block nav%}
+<div class="topnav" id="myTopnav">
+<a href="#home">Home</a>
+<a href="#news">News</a>
+<a href="#projects" class="active">Projects</a>
+<a href="#Site">My Site</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+</a>
+</dev>
+{% endblock %}
+
+{% block til%}
+<dev class="Title">
+<h1>Projects</h1>
+</dev>
+{%endblock%}
+
+{% block conttent %}
+<dev class="text">
+{% for project in Projects %}
+<img class="logo-project" src="{{project.image.url}}">
+<h2><a href="#">{{ project.title }}</a></h2>
+<p>{{ project.body }}</p>
+<p>{{ project.date }}</p>
+{% endfor %}
+{%endblock%}

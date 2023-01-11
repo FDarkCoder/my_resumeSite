@@ -1,0 +1,53 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>
+    {% block title %}
+    Resume (DarkCoder)
+    {%endblock%}
+    </title>
+</head>
+<body>
+   {% block nav%}
+   <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#projects">Projects</a>
+      <a href="#Site">My Site</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+      </a>
+   {% endblock %}
+      <!-- <form action="{% url 'accounts:logout' %}" method="post">
+         <a><button type='submit'>Logout</button></a>
+         {% csrf_token %}
+      <!-- <a><button class="button-a" type='submit'>singup</button></a> -->
+      <!-- <a><button class="button-a" type='submit'>Login</button></a> -->
+   </div>
+   <dev id="logo-project">
+   {% block til %}
+   
+   {% endblock %}
+   </dev>
+   <dev class="text">
+      {% block conttent %}
+      
+      {%endblock%}
+   </dev>
+   <script>
+   function myFunction() {
+      var x = document.getElementById("myTopnav");
+      var y = document.getElementById("logo-project");
+      if (x.className === "topnav") {
+         x.className += " responsive";
+         y.className += " responsive";
+      } else {
+         x.className = "topnav";
+      }
+   }
+   </script>
+</body>
+</html>
